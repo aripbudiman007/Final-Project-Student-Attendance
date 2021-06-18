@@ -1,6 +1,7 @@
 class AttendanceController{
     static viewAll(req, res){
-        res.render('./attendance/home')
+        let notif = req.query
+        res.render('./attendance/home', {notif})
     }
 
     static cekIn(req, res){
@@ -8,7 +9,8 @@ class AttendanceController{
     }
 
     static submitCekIn(req, res){
-        res.redirect('/')
+        let notif = `Check In success`
+        res.redirect(`/attendance?notif=${notif}`)
     }
 }
 

@@ -10,8 +10,18 @@
     <script src="/assets/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <%- include('../studentNavbar') %> 
+<br/>
 <div class="container">
-    <a href="/attendance/cekin" class="btn-btn-success">CekIn</a>
+    <% if(notif){ %> 
+        <div class="alert alert-success" role="alert">
+            <%= notif %> 
+          </div>
+    <% } %> 
+    <div class="jumbotron">
+        <h3>Welcome, Student Name</h3>
+        Silahkan Klik Tombol untuk melakukan cekin.<br/><a href="/attendance/cekin" class="btn btn-success">CekIn</a>
+    </div>
 </div>
 </body>
 </html>
