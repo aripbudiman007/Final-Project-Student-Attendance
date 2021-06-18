@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
 </head>
 <body>
-<%- include('../navbar') %> 
-<br/>
 <div class="container">
     <a href="/students/add" class="btn btn-success btn-sm">Add Student</a>
     <% if (notif){%>
@@ -24,6 +22,7 @@
                 <th>Birth Date</th>
                 <th>Email</th>
                 <th>Phone Number</th>
+                <th>Class</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -34,6 +33,7 @@
                 <td><%= student.FullName %> </td>
                 <td><%= student.gender %> </td>
                 <td><%= student.birthDate %> </td>
+                <td><%= student.email %> </td>
                 <td><%= student.email %> </td>
                 <td><%= student.phoneNumber %> </td>
                 <td>

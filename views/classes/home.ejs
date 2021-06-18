@@ -22,15 +22,24 @@
             <tr>
                 <th>No</th>
                 <th>Class Name</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <% data.forEach((el, index) => { %> 
+          <% data.forEach((el, index) => { %> 
             <tr>
                 <td><%= index+1 %> </td>
                 <td><%= el.className %></td>
-            <% }) %> 
+                <td>
+                  <button>
+                    <a href="/class/edit/<%= el.id %>" style="text-decoration: none; color: black;">Edit</a>
+                </button>
+                <button>
+                    <a href="/class/delete/<%= el.id %>" style="text-decoration: none; color: black;">Delete</a>
+                </button>
+                </td>
             </tr>
+            <% }) %> 
         </tbody>
     </table>
   

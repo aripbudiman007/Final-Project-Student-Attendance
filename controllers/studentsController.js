@@ -1,4 +1,4 @@
-const { Student, Class } = require('../models')
+const { Student, Class, StudentClass } = require('../models')
 class StudentController{
     static home(req,res) {
         const { notif } = req.query;
