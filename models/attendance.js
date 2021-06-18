@@ -19,6 +19,12 @@ module.exports = (sequelize, DataTypes) => {
     checkOut: DataTypes.DATE
   }, {
     sequelize,
+    hooks: {
+      beforeCreate: (attendance) => {
+        attendance.studentId = 1,
+        attendance.checkIn = new Date()
+      }
+    },
     modelName: 'Attendance',
   });
   
