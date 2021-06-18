@@ -14,11 +14,12 @@ class LoginController {
                 let compare = bcrypt.compareSync(password, result.password);
                 if (compare) {
                     req.session.userId = result.id
+                    req.session.email = result.email
                     req.session.role = result.role
                     if(result.role === 'student'){
-                        res.redirect('/students')
+                        res.redirect('/attendance',)
                     }else if(result.role === 'admin'){
-                        res.redirect('/attendance')
+                        res.redirect('/students')
                     }
                 } else {
                     let err = new Error('Email atau password tidak ditemukan')

@@ -1,0 +1,14 @@
+[
+	{
+		"id" : 1,
+		"email" : "arip@mail.com",
+		"name" : "Arip Budiman",
+		"role" : "student"
+	},
+	{
+		"id" : 2,
+		"email" : "umam@mail.com",
+		"name" : "Khoerul Umam",
+		"role" : "admin"
+	}
+]

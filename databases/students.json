@@ -1,0 +1,20 @@
+[
+	{
+		"id":1,
+		"firstName" : "Arip",
+		"lastName" : "Budiman",
+		"gender" : "Laki-laki",
+		"birthDate" : "2020-01-01",
+		"email" : "arip@mail.com",
+		"phoneNumber" : 081234569
+	},
+	{
+		"id":2,
+		"firstName" : "Khoerul",
+		"lastName" : "Umam",
+		"gender" : "Laki-laki",
+		"birthDate" : "2020-01-01",
+		"email" : "umam@mail.com",
+		"phoneNumber" : 081234567
+	}
+]

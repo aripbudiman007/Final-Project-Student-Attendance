@@ -15,5 +15,6 @@ router.use('/register', registerRouter)
 router.use('/students', authMiddleware, studentRouter)
 router.use('/class', authMiddleware, classRouter)
 router.use('/attendance', authMiddleware, attendanceRouter)
+router.use('/logout', IndexController.logout)
 
 module.exports = router
