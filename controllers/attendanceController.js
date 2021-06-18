@@ -1,7 +1,15 @@
+const { Attendance } = require('../models')
+
 class AttendanceController{
     static viewAll(req, res){
-        let notif = req.query
-        res.render('./attendance/home', {notif})
+        Attendance.findAll()
+        .then(result => {
+            let notif = req.query
+            res.render('./attendance/attendanceList', {attenden: result, notif})
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
 
     static cekIn(req, res){
@@ -9,8 +17,15 @@ class AttendanceController{
     }
 
     static submitCekIn(req, res){
-        let notif = `Check In success`
-        res.redirect(`/attendance?notif=${notif}`)
+        Attendance.create()
+        .then((result) => {
+            console.log(result);
+            let notif = `Check In success`
+         res.redirect(`/attendance?notif=${notif}`)
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
 }
 
