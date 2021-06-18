@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-    <form action="">
+    <form action="/register" method="POST">
         <div class="form-group">
             <label for="email">Email</label>
             <input type="text" name="email" class="form-control">
@@ -19,7 +19,19 @@
         <input type="password" name="password" class="form-control">
         </div>
         <div class="form-group">
-            <input type="submit" value="Login" class="btn btn-primary">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select name="role" class="form-control">
+                <option value="">Choose Role</option>
+                <option value="admin">Admin</option>
+                <option value="student">Student</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Register" class="btn btn-primary">
         </div>
     </form>
 </div>

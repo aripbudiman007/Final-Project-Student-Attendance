@@ -17,16 +17,16 @@ module.exports = (sequelize, DataTypes) => {
   };
   User.init({
     email: DataTypes.STRING,
-    passowrd: DataTypes.STRING,
+    password: DataTypes.STRING,
     name: DataTypes.STRING,
     role: DataTypes.STRING
   }, {
     sequelize,
     hooks:{
-      beforeRestore: (user) => {
+      beforeCreate: (user) => {
         const salt = bcrypt.genSaltSync(10)
-        const hash = bcrypt.hashSync(user.passowrd, salt)
-        user.passowrd = hash
+        const hash = bcrypt.hashSync(user.password, salt)
+        user.password = hash
       }
     },
     modelName: 'User',

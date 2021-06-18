@@ -1,6 +1,11 @@
 const { Attendance } = require('../models')
 
 class AttendanceController{
+    static home(req, res){
+        let { notif } = req.query
+        res.render('./attendance/home', {notif})
+    }
+
     static viewAll(req, res){
         Attendance.findAll()
         .then(result => {
