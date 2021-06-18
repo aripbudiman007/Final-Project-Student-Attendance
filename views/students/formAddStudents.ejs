@@ -44,7 +44,7 @@
             <select name="classId" class="form-control">
                 <option value=""> Choose Class</option>
                 <% classes.forEach(el => { %> 
-                <option value="<%= el.id %>"><%= el.className %>  </option>
+                <option value="<%= el.id %>" name="classID"><%= el.className %>  </option>
                 <% }) %>
             </select>
         </div>
