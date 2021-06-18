@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <form action="/students/edit/<%= student.id %>" method="POST">
+        <div class="form-group">
+            <label for="">First Name</label>
+            <input type="text" name="firstName" class="form-control" value="<%= student.firstName%>">
+        </div>
+        <div class="form-group">
+            <label for="">Last Name</label>
+            <input type="text" name="lastName" class="form-control" value="<%= student.lastName%>">
+        </div>
+        <div class="form-group">
+            <label for="">Gender</label>
+            <div>
+                <% if(student.gender === "Laki-laki"){%>
+                    <input type="radio" name="gender" selected value="Laki-laki"> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan"> Perempuan
+                <%} else {%>
+                    <input type="radio" name="gender" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="gender" selected value="Perempuan"> Perempuan
+                <%}%>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">Birth Date</label>
+            <input type="date" name="birthDate" class="form-control" value="<%= student.birthDate.toLocaleDateString('en-GB').split("/").reverse().join("-")%>">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" name="email" class="form-control" value="<%= student.email%>">
+        </div>
+        <div class="form-group">
+            <label for="">Phone Number</label>
+            <input type="text" name="phoneNumber" class="form-control"  value="<%= student.phoneNumber%>">
+        </div>
+        <div>
+            <input type="submit" name="Save" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+</body>
+</html>
