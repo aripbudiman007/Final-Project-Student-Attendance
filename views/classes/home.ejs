@@ -31,12 +31,8 @@
                 <td><%= index+1 %> </td>
                 <td><%= el.className %></td>
                 <td>
-                  <button>
-                    <a href="/class/edit/<%= el.id %>" style="text-decoration: none; color: black;">Edit</a>
-                </button>
-                <button>
-                    <a href="/class/delete/<%= el.id %>" style="text-decoration: none; color: black;">Delete</a>
-                </button>
+                    <a href="/class/edit/<%= el.id %>" class="btn btn-primary">Edit</a>
+                    <a href="/class/delete/<%= el.id %>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             <% }) %> 

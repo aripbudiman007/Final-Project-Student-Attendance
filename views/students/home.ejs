@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
 </head>
 <body>
+    <%- include('../navbar') %> 
+    <br/>
 <div class="container">
     <a href="/students/add" class="btn btn-success btn-sm">Add Student</a>
     <% if (notif){%>
         <h2><%= notif %></h2>
     <%}%>
+    <br><br/>
     <table class="table table-bordered">
         <thead>
             <tr>
