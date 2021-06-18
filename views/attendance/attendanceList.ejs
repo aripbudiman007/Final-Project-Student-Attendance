@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class List</title>
+    <title>Attendance List</title>
     <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/assets/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
     <%- include('../studentNavbar') %> 
-<br/>
+    <br/>
 <div class="container">
-    <% if(notif){ %> 
-        <div class="alert alert-success" role="alert">
-            <%= notif %> 
-          </div>
-    <% } %> 
-    <div class="jumbotron">
-        <h3>Welcome, Student Name</h3>
-        Silahkan Klik Tombol untuk melakukan cekin.<br/><a href="/attendance/cekin" class="btn btn-success">CekIn</a>
-    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Student Name</th>
+                <th>checkIn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% attenden.forEach((el, index) => { %> 
+            <tr>
+                <td><%= index+1 %> </td>
+                <td><%= el.studentId %> </td>
+                <td><%= el.checkIn %> </td>
+            </tr>
+            <% }) %> 
+        </tbody>
+    </table>
 </div>
+
 </body>
 </html>
